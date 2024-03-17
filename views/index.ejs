@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/" method="POST">
+            <select name="category" id="category" class="category">
+                <option value="">Select Category</option>
+                <option value="Any">Any</option>
+                <option value="Programming">Programming</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+                <option value="Dark">Dark</option>
+                <option value="Pun">Pun</option>
+            </select>
+            <button type="submit">GO</button>
+        </form>
+        <div class="content">
+            <%if (content.type == 'twopart') {%>
+            <h5> <%=  content.setup %> </h5><br>
+            <h5> <%=  content.delivery %> </h5>
+            <%}%>
+
+            <%if (content.type == 'single') {%>
+                <h5> <%=  content.joke %> </h5><br>
+            <%}%>
+        </div>
+    </div>
+</body>
+</html>
